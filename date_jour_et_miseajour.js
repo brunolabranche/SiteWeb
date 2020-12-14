@@ -1,8 +1,13 @@
 <!--    A script to display the date on which the document was last modified    -->
 <!-- Hide script from older browsers
 //-------------------------------------------
-// Création 2007-02-25, Bruno Labranche
-// Mise à jour 2018-01-02, Bruno Labranche
+// CrÃ©ation 2007-02-25, Bruno Labranche
+// Mise Ã  jour 2018-01-02, Bruno Labranche
+// Mise Ã  jour 20220-12-14, BL, caractÃ¨res accentuÃ©s en code HTML pour site sur github
+// Ã : &agrave;
+// Ã©: &eacute;
+// Ã¨: &egrave;
+// Ã»: &ucirc;
 //-------------------------------------------
 // Begin
 // Liste des jours de la semaine
@@ -17,17 +22,17 @@ days[7] = "samedi";
 // Liste des mois
 var months = new Array(13);
 months[1] = "janvier";
-months[2] = "février";
+months[2] = "f&eacute;vrier";
 months[3] = "mars";
 months[4] = "avril";
 months[5] = "mai";
 months[6] = "juin";
 months[7] = "juillet";
-months[8] = "août";
+months[8] = "ao&ucirc;t";
 months[9] = "septembre";
 months[10] = "octobre";
 months[11] = "novembre";
-months[12] = "décembre";
+months[12] = "d&eacute;cembre";
 
 // Date d'aujourd'hui
     var date = new Date();
@@ -56,7 +61,7 @@ months[12] = "décembre";
     //document.write('<br>')
     document.write('&nbsp&nbsp&nbsp&nbsp----&nbsp&nbsp&nbsp&nbsp')
 
-// Date de mise à jour
+// Date de mise Ã  jour
 var dateObj = new Date(document.lastModified);
 var wday = days[dateObj.getDay() + 1];
 var lmonth = months[dateObj.getMonth() + 1];
@@ -70,8 +75,8 @@ var fyear = dateObj.getFullYear();
 var hours = dateObj.getHours();
 var minutes = dateObj.getMinutes();
 var seconds = dateObj.getSeconds();
-document.write("Dernière mise à jour le " + wday + " " + daydate + " " + lmonth + " " + fyear)
-document.write(" à " + hours + ":")
+document.write("Derni&egrave;re mise &agrave; jour le " + wday + " " + daydate + " " + lmonth + " " + fyear)
+document.write(" &agrave; " + hours + ":")
 if (minutes <10)
 	document.write("0")
 document.write(minutes + ":")
